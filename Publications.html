@@ -3,7 +3,16 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <title>Mohammad Sarraf Joshaghani's Webpage</title>
 </head>
-<body style="background-color:whiteSmoke">
+<body style="background-color:white">
+  <script type="text/javascript">
+      function toggle_visibility(id) {
+         var e = document.getElementById(id);
+         if(e.style.display == 'block')
+            e.style.display = 'none';
+         else
+            e.style.display = 'block';
+      }
+  </script>
 <h1><center>Publications</center></h1>
 <blockquote>
   <a href="index.html">Home</a> | 
@@ -12,23 +21,87 @@
   <!-- <a href="personal.html">Personal Interests</a> -->
 </blockquote>
 <hr>
-<h2>Journal Publications</h2>
+<h3>Preprints</h3>
 <ol>
+<li>
+<b>M. S. Joshaghani</b>, B. Riviere, and M. Sekachev,
+"Maximum-principle-satisfying discontinuous Galerkin methods for incompressible two-phase immiscible flow",
+submitted to <b>Computer Methods in Applied Mechanics and Engineering Journal</b>, 2021 
+[<a href="https://arxiv.org/abs/2106.11807">arXiv link</a>] 
+[<a href="#/"  onclick="toggle_visibility('incompressible21');">Abstract</a>]
+<div style="display:none" id="incompressible21"><u>Abstract:</u><br>
+This paper proposes a fully implicit numerical scheme for immiscible incompressible two-phase flow in porous media taking into account gravity, capillary effects, and heterogeneity. The objective is to develop a fully implicit stable discontinuous Galerkin (DG) solver for this system that is accurate, bound-preserving, and locally mass conservative. To achieve this, we augment our DG formulation with post-processing flux and slope limiters. The proposed framework is applied to several benchmark problems and the discrete solutions are shown to be accurate, to satisfy the maximum principle and local mass conservation. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('incompressible21Bib');">BibTeX</a>]<div style="display: none" id="incompressible21Bib">
+<pre>
+@article{joshaghani2021Incompressible,
+  title={Maximum-principle-satisfying discontinuous Galerkin methods for incompressible two-phase immiscible flow},
+  author={M.~S.~Joshaghani and B.~Riviere and M.~Sekachev},
+  journal={arXiv preprint arXiv:2106.11807},
+  year={2021}
+}
+</pre>
+</li>
+
+
+
+
 <li>
 <b>M. S. Joshaghani</b>, V. Girault, B. Riviere,
 "A vertex scheme for two-phase flow in heterogeneous media",
 submitted to <b>Journal of Computational Physics</b>, 2021 
-[<a href="https://arxiv.org/abs/2103.03285" target="_blank">arXiv link</a>] </li>
+[<a href="https://arxiv.org/abs/2103.03285">arXiv link</a>] 
+[<a href="#/"  onclick="toggle_visibility('vertex21');">Abstract</a>]
+<div style="display:none" id="vertex21"><u>Abstract:</u><br>This paper presents the numerical solution of immiscible two-phase 
+flows in porous media, obtained by a first-order finite element method equipped with mass-lumping and flux up-winding. 
+The unknowns are the physical phase pressure and phase saturation. Our numerical experiments confirm that the method converges 
+optimally for manufactured solutions. For both structured and unstructured meshes, we observe the high-accuracy wetting saturation 
+profile that ensures minimal numerical diffusion at the front. Performing several examples of quarter-five spot problems in two and 
+three dimensions, we show that the method can easily handle heterogeneities in the permeability field. Two distinct features that make 
+the method appealing to reservoir simulators are: (i) maximum principle is satisfied, and (ii) mass balance is locally conserved. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('vertex21bibtex');">BibTeX</a>]<div style="display: none" id="vertex21bibtex">
+<pre>
+@article{joshaghani2021vertex,
+  title={A vertex scheme for two-phase flow in heterogeneous media},
+  author={M.~S.~Joshaghani and V.~Girault and B.~Riviere},
+  journal={arXiv preprint arXiv:2103.03285},
+  year={2021}
+}
+</pre>
 </li>
-<!--  -->
-<!--  -->
+
+
+
 <li>
 <b>M. S. Joshaghani</b>, and K. B. Nakshatrala,
 "A modeling framework for coupling plasticity with species diffusion",
-submitted to <b>Computer Methods in Applied Mechanics and Engineering Journal</b>, 2020 
-[<a href="https://arxiv.org/abs/2011.06652" target="_blank">arXiv link</a>] </li>
+submitted to <b>International Journal for Numerical Methods in Engineering</b>, 2020 
+[<a href="https://arxiv.org/abs/2011.06652" target="_blank">arXiv link</a>] 
+[<a href="#/"  onclick="toggle_visibility('plasticity20');">Abstract</a>]
+<div style="display:none" id="plasticity20"><u>Abstract:</u><br>
+This paper presents a modeling framework&#8212mathematical model and computational framework&#8212to study the response of a plastic material due to the presence and transport of a chemical species in the host material. Such a modeling framework is important to a wide variety of problems ranging from Li-ion batteries, moisture diffusion in cementitious materials, hydrogen diffusion in metals, to consolidation of soils under severe loading-unloading regimes. The mathematical model incorporates experimental observations reported in the literature on how (elastic and plastic) material properties change because of the presence and transport of a chemical species. Also, the model accounts for one-way (transport affects the deformation but not vice versa) and two-way couplings between deformation and transport subproblems. The resulting coupled equations are not amenable to analytical solutions; so, we present a robust computational framework for obtaining numerical solutions. Given that popular numerical formulations do not produce nonnegative solutions, the computational framework uses an optimized-based nonnegative formulation that respects physical constraints (e.g., nonnegative concentrations). For completeness, we will also show the effect and propagation of the negative concentrations, often produced by contemporary transport solvers, into the overall predictions of deformation and concentration fields. Notably, anisotropy of the diffusion process exacerbates these unphysical violations. Using representative numerical examples, we will discuss how the concentration field affects plastic deformations of a degrading solid. Based on these numerical examples, we also discuss how plastic zones spread because of material degradation. To illustrate how the proposed computational framework performs, we report various performance metrics such as optimization iterations and time-to-solution. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('plasticity20bibtex');">BibTeX</a>]<div style="display: none" id="plasticity20bibtex">
+<pre>
+@article{joshaghani2020modeling,
+  title={A modeling framework for coupling plasticity with species diffusion},
+  author={M.~S.~Joshaghani and N.~B.~Nakshatrala},
+  journal={arXiv preprint arXiv:2011.06652},
+  year={2020}
+}
+</pre>
 </li>
+
+
+
+
+
+
+</ol>
 <!--  -->
+<h3>Journal Publications</h3>
+<ol>
 <!--  -->
 <li> <b>M. S. Joshaghani</b>,
 J. Chang, K. B. Nakshatrala, and M. G. Knepley,
@@ -36,83 +109,240 @@ J. Chang, K. B. Nakshatrala, and M. G. Knepley,
   "On composable block solvers and performance spectrum analysis for double porosity/permeability model"</a>, <b>Journal of Computational Physic</b>,
 <b>386:</b> 428-466, 2019
 [<a 
-href="https://arxiv.org/abs/1808.08328" target="_blank">arXiv link</a>] </li>
-<!--  -->
-<!--  -->
+href="https://arxiv.org/abs/1808.08328" target="_blank">arXiv link</a>] 
+[<a href="#/"  onclick="toggle_visibility('HPC19');">Abstract</a>]
+<div style="display:none" id="HPC19"><u>Abstract:</u><br>
+The objective of this paper is twofold. First, we propose two composable block solver methodologies to solve the discrete systems that arise from finite element discretizations of the double porosity/permeability (DPP) model. The DPP model, which is a four-field mathematical model, describes the flow of a single-phase incompressible fluid in a porous medium with two distinct pore-networks and with a possibility of mass transfer between them. Using the composable solvers feature available in PETSc and the finite element libraries available under the Firedrake Project, we illustrate two different ways by which one can effectively precondition these large systems of equations. Second, we employ the recently developed performance model called the Time-Accuracy-Size (TAS) spectrum to demonstrate that the proposed composable block solvers are scalable in both the parallel and algorithmic sense. Moreover, we utilize this spectrum analysis to compare the performance of three different finite element discretizations (classical mixed formulation with H(div) elements, stabilized continuous Galerkin mixed formulation, and stabilized discontinuous Galerkin mixed formulation) for the DPP model. Our performance spectrum analysis demonstrates that the composable block solvers are fine choices for any of these three finite element discretizations. Sample computer codes are provided to illustrate how one can easily implement the proposed block solver methodologies through PETSc command line options. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('HPC19bibtex');">BibTeX</a>]<div style="display: none" id="HPC19bibtex">
+<pre>
+@article{joshaghani2019composable,
+title={Composable block solvers for the four-field double porosity/permeability model},
+author={M.~S.~Joshaghani and J.~Chang and K.~B.~Nakshatrala and M.~G.~Knepley},
+journal={Journal of Computational Physics},
+volume={386},
+pages={428--466},
+year={2019},
+publisher={Elsevier}
+}
+</pre>
+</li>
+
+
+
+
+
 <li>K. B. Nakshatrala and <b>M. S. Joshaghani</b>,
 <a href="https://link.springer.com/article/10.1007/s11242-019-01326-7" target="-blank">
   "On interface conditions for flows in coupled free-porous media" </a>,
 <b>Transport in Porous Media</b>, <b>130:</b> 577-609, 2019  
 [<a
-href="https://arxiv.org/abs/1902.02510" target="_blank">arXiv link</a>] </li>
-<!--  -->
-<!--  -->
+href="https://arxiv.org/abs/1902.02510" target="_blank">arXiv link</a>] 
+[<a href="#/"  onclick="toggle_visibility('interface19');">Abstract</a>]
+<div style="display:none" id="interface19"><u>Abstract:</u><br>
+Many processes in nature (e.g., physical and biogeochemical processes in hyporheic zones, and arterial mass transport) occur near the interface of free-porous media. A firm understanding of these processes needs an accurate prescription of flow dynamics near the interface which (in turn) hinges on an appropriate description of interface conditions along the interface of free-porous media. Although the conditions for the flow dynamics at the interface of free-porous media have received considerable attention, many of these studies were empirical and lacked a firm theoretical underpinning. In this paper, we derive a complete and self-consistent set of conditions for flow dynamics at the interface of free-porous media. We first propose a principle of virtual power by incorporating the virtual power expended at the interface of free-porous media. Then by appealing to the calculus of variations, we obtain a complete set of interface conditions for flows in coupled free-porous media. A noteworthy feature of our approach is that the derived interface conditions apply to a wide variety of porous media models. We also show that the two most popular interface conditions&#8211the Beavers-Joseph condition and the Beavers-Joseph-Saffman condition -- are special cases of the approach presented in this paper. The proposed principle of virtual power also provides a minimum power theorem for a class of flows in coupled free-porous media, which has a similar mathematical structure as the ones enjoyed by flows in uncoupled free and porous media. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('interface19bibtex');">BibTeX</a>]<div style="display: none" id="interface19bibtex">
+<pre>
+@article{nakshatrala2019interface,
+title={On interface conditions for flows in coupled free-porous media},
+author={K.~B.~Nakshatrala and M.~S.~Joshaghani},
+journal={Transport in Porous Media},
+volume={130},
+number={2},
+pages={577--609},
+year={2019},
+publisher={Springer}
+</pre>
+</li>
+
+
+
+
 <li><b> M. S. Joshaghani</b>, S. H. Joodat, and K. B. Nakshatrala,
 <a href="https://www.sciencedirect.com/science/article/pii/S0045782519302075?dgcid=author" target="-blank">
   "A stabilized mixed discontinuous Galerkin formulation for double porosity/permeability model"</a>, <b>Computer Methods in Applied Mechanics and Engineering Journal</b>, <b>352:</b> 508-560, 2019
 [<a
-href="https://arxiv.org/abs/1902.02510" target="_blank">arXiv link</a>] </li>
-<!--  -->
-<!--  -->
+href="https://arxiv.org/abs/1805.01389" target="_blank">arXiv link</a>] 
+[<a href="#/"  onclick="toggle_visibility('DPP19');">Abstract</a>]
+<div style="display:none" id="DPP19"><u>Abstract:</u><br>
+Modeling flow through porous media with multiple pore-networks has now become an active area of research due to recent technological endeavors like geological carbon sequestration and recovery of hydrocarbons from tight rock formations. Herein, we consider the double porosity/permeability (DPP) model, which describes the flow of a single-phase incompressible fluid through a porous medium exhibiting two dominant pore-networks with a possibility of mass transfer across them. We present a stable mixed discontinuous Galerkin (DG) formulation for the DPP model. The formulation enjoys several attractive features. These include: (i) Equal-order interpolation for all the field variables (which is computationally the most convenient) is stable under the proposed formulation. (ii) The stabilization terms are residual-based, and the stabilization parameters do not contain any mesh-dependent parameters. (iii) The formulation is theoretically shown to be consistent, stable, and hence convergent. (iv) The formulation supports non-conforming discretizations and distorted meshes. (v) The DG formulation has improved element-wise (local) mass balance compared to the corresponding continuous formulation. (vi) The proposed formulation can capture physical instabilities in coupled flow and transport problems under the DPP model. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('DPP19bibtex');">BibTeX</a>]<div style="display: none" id="DPP19bibtex">
+<pre>
+@article{joshaghani2019stabilized,
+title={A stabilized mixed discontinuous Galerkin formulation for double porosity/permeability model},
+author={M.~S.~Joshaghani and S.~H.~S.~Joodat and K.~B.~Nakshatrala},
+journal={Computer Methods in Applied Mechanics and Engineering},
+volume={352},
+pages={508--560},
+year={2019},
+publisher={Elsevier}
+}
+</pre>
+</li>
+
+
+
+
 <li>A. M. Raheem, C. Vipulanandan, and <b>M. S. Joshaghani</b>, 
 <a href="https://www.sciencedirect.com/science/article/pii/S1674775516300907" target="-blank">
   "Non-destructive experimental testing and modeling of electrical impedance behavior of untreated and treated ultra-soft clayey soils"</a>,
 <b>Journal of Rock Mechanics and Geotechnical Engineering</b>, <b>9(3):</b> 543-550, 2017
+[<a href="#/"  onclick="toggle_visibility('experiment17');">Abstract</a>]
+<div style="display:none" id="experiment17"><u>Abstract:</u><br>
+The characterization of ultra-soft clayey soil exhibits extreme challenges due to low shear strength of such material. Hence, inspecting the non-destructive electrical impedance behavior of untreated and treated ultra-soft clayey soils gains more attention. Both shear strength and electrical impedance were measured experimentally for both untreated and treated ultra-soft clayey soils. The shear strength of untreated ultra-soft clayey soil reached 0.17 kPa for 10% bentonite content, while the shear strengths increased to 0.27 kPa and 6.7 kPa for 10% bentonite content treated with 2% lime and 10% polymer, respectively. The electrical impedance of the ultra-soft clayey soil has shown a significant decrease from 1.6 kΩ to 0.607 kΩ when the bentonite content increased from 2% to 10% at a frequency of 300 kHz. The 10% lime and 10% polymer treatments have decreased the electrical impedances of ultra-soft clayey soil with 10% bentonite from 0.607 kΩ to 0.12 kΩ and 0.176 kΩ, respectively, at a frequency of 300 kHz. A new mathematical model has been accordingly proposed to model the non-destructive electrical impedance-frequency relationship for both untreated and treated ultra-soft clayey soils. The new model has shown a good agreement with experimental data with coefficient of determination (R2) up to 0.99 and root mean square error (RMSE) of 0.007 kΩ.
+</div> 
+[<a href="#/" onclick="toggle_visibility('experiment17bibtex');">BibTeX</a>]<div style="display: none" id="experiment17bibtex">
+<pre>
+@article{raheem2017experimental,
+title={Non-destructive experimental testing and modeling of electrical impedance behavior of untreated and treated ultra-soft clayey soils},
+author={A.~M.~Raheem and C.~Vipulanandan and M.~S.~Joshaghani},
+journal={Journal of Rock Mechanics and Geotechnical Engineering},
+volume={9},
+number={3},
+pages={543--550},
+year={2017},
+publisher={Elsevier}
+}
+</pre>
 </li>
-<!--  -->
-<!--  -->
+
+
+
+
 <li>M. M. R. Mousavi, M. D. Champiri, <b>M. S. Joshaghani</b>, and S. Sajjadi,
-<a href="http://www.aimspress.com/Materials/2016/4/1759" target="-blank">
+<a href="https://www.aimspress.com/article/id/1147" target="-blank">
   "A kinematic measurement for ductile and brittle failure of materials using digital image correlation"</a>,
 <b>AIMS Materials Science</b>, <b>3(4):</b> 1759-1772, 2016 
+[<a href="#/"  onclick="toggle_visibility('brittle16');">Abstract</a>]
+<div style="display:none" id="brittle16"><u>Abstract:</u><br>
+This paper addresses some material level test which is done on quasi-brittle and ductile materials in the laboratory. The displacement control experimental program is composed of mortar cylinders under uniaxial compression shows quasi-brittle behavior and seemingly round-section aluminum specimens under uniaxial tension represents ductile behavior. Digital Image Correlation gives full field measurement of deformation in both aluminum and mortar specimens. Likewise, calculating the relative displacement of two points located on top and bottom of virtual LVDT, which is virtually placed on the surface of the specimen, gives us the classical measure of strain. However, the deformation distribution is not uniform all over the domain of specimens mainly due to imperfect nature of experiments and measurement devices. Displacement jumps in the fracture zone of mortar specimens and strain localization in the necking area for the aluminum specimen, which are reflecting different deformation values and deformation gradients, is compared to the other regions. Since the results are inherently scattered, it is usually non-trivial to smear out the stress of material as a function of a single strain value. To overcome this uncertainty, statistical analysis could bring a meaningful way to closely look at scattered results. A large number of virtual LVDTs are placed on the surface of specimens in order to collect statistical parameters of deformation and strain. Values of mean strain, standard deviation and coeffcient of variations for each material are calculated and correlated with the failure type of the corresponding material (either brittle or ductile). The main limiters for standard deviation and coeffcient of variations for brittle and ductile failure, in pre-peak and post-peak behavior are established and presented in this paper. These limiters help us determine whether failure is brittle or ductile without determining of stress level in the material. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('brittle16bibtex');">BibTeX</a>]<div style="display: none" id="brittle16bibtex">
+<pre>
+article{mousavi2016kinematic,
+  title={A kinematic measurement for ductile and brittle failure of materials using digital image correlation [J]},
+  author={M.~M.~R.~Mousavi and M.~D.~Champiri and M.~S.~Joshaghani and S.~Sajjadi},
+  journal={AIMS Materials Science},
+  volume={3},
+  number={4},
+  pages={1759--1772},
+  year={2016}
+}
+</pre>
 </li>
-<!--  -->
-<!--  -->
+
+
+
+
 <li>A. M. Raheem, and <b>M. S. Joshaghani</b>,
 <a href="http://www.journalijar.com/article/8883/modeling-of-shear-strength-water-content-relationship-of-ultra-soft-clayey-soil/" target="-blank">
   "Modeling of shears strength-water content relationship of ultra-soft clayey soil"</a>,
 <b>International Journal of Advanced Research</b>, <b>4(4):</b> 537-545, 2016
+[<a href="#/"  onclick="toggle_visibility('shaer16');">Abstract</a>]
+<div style="display:none" id="shaer16"><u>Abstract:</u><br>
+In this study, a detailed review on the reported correlations of shear strength and physical properties of soft soil has been investigated. An ultra-soft soil has been prepared from 2% to 10% bentonite clay soil with high water content. The shear strength of the prepared ultra-soft soil has been tested using modified vane shear device. Based on collected data and experimental results, two new mathematical models for shear strength-water content relationship has been proposed for shear strength and water content ranged from 6 kPa to 0.1 kPa and 50% to 1100% respectively. The second proposed model was compared with several reported models from literature to demonstrate shear strength-water content relationship for ultra-soft soil with low shear strength and high water content. The second proposed model has shown a very good agreement with the experimental results with coefficient of determination (R2) up to 0.91.
+</div> 
+[<a href="#/" onclick="toggle_visibility('shear16bibtex');">BibTeX</a>]<div style="display: none" id="shear16bibtex">
+<pre>
+@article{raheem2016modeling,
+title={MODELING OF SHEAR STRENGTH-WATER CONTENT RELATIONSHIP OF ULTRA-SOFT CLAYEY SOIL.},
+author={A.~M.~Raheem and M.~S.~Joshaghani},
+journal={International Journal of Advanced Research},
+volume={4},
+number={4},
+pages={537--545},
+year={2016}
+}
+</pre>
 </li>
-<!--  -->
-<!--  -->
+
+
+
+
 <li>
    <b>M. S. Joshaghani</b>, A. M. Raheem, and M. M. R. Mousavi,
    <a href="http://pubs.sciepub.com/ajcea/4/3/5/index.html"
       target="-blank">
      "Analytical modeling of large-scale testing of axial pipe-soil interaction in ultra-soft soil"</a>
    <b>American Journal of Civil Engineering and Architecture</b>, <b>4(3):</b> 98-105, 2016
+   <b>M. S. Joshaghani</b>, and others,
+   "title",
+   submitted to <b>Journal</b>, year 
+   [<a href="#/"  onclick="toggle_visibility('pipe16');">Abstract</a>]
+   <div style="display:none" id="pipe16"><u>Abstract:</u><br>
+In this study, large-scale model test with dimensions of 2.4 m*2.4 m*1.8 m has been designed to investigate the behavior of axial pipe-soil interaction on the simulated ultra-soft seabed. Large-scale tests were performed on plastic pipes by loading the pipe from the ends, placed on ultra-soft clayey soil with undrained shear strength ranged from 0.01 kPa to 0.1 kPa, to quantify the axial soil-pipe interaction. An accurate remote gridding system was developed for displacement measurement. Two new models were used to correlate the shear strength with the water content of the ultra-soft soil. The models were verified with data points reported in the literature and experimental tests performed in the laboratory. The shear strength was correlated strongly with water content of ultra-soft soil with coefficient of correlation (R2) up to 0.91. Moreover, new analytical models were established to predict the axial break-out resistance and large-displacement residual resistance in ultra-soft soil. The new models have taken into account the effects of vertical loads (W), normalized initial embedment (δin), boundary length (λ), and the rate of axial loading (Vp). The new models have shown very good predictions for the experimental results with coefficient of correlation (R2) up to 0.87. Also, a new analytical model (p-q-m) was proposed to predict the force-displacement relationship for axial testing of pipe-soil interaction. This new model (p-q-m) has also shown a very good agreement with the experimental testing results for the full force-displacement response of pipe soil interaction. Detailed statistical procedure has been used to analyze the performance of both p-q and p-q-m models. The modified p-q model presents better estimation using any of the statistical methods.
+   </div> 
+   [<a href="#/" onclick="toggle_visibility('pipe16bibtex');">BibTeX</a>]<div style="display: none" id="pipe16bibtex">
+   <pre>
+@article{joshaghani2016analytical,
+title={Analytical modeling of large-scale testing of axial pipe-soil interaction in ultra-soft soil},
+author={M.~S.~Joshaghani and A.~M.~Raheem and M.~M.~R.~Mousavi},
+journal={American Journal of Civil Engineering and Architecture},
+volume={4},
+number={3},
+pages={98--105},
+year={2016}
+}
+   </pre>
 </li>
-<!--  -->
-<!--  -->
+
+
+
+
 <li>
   C. Vipulanandan, J. A. Yahouide, and <b>M. S. Joshaghani</b>,
 <a href="https://ascelibrary.org/doi/10.1061/9780784413012.148" target="-blank">
   "Deepwater axial and lateral sliding pipe-soil interaction model study"</a>
   <b> Pipelines and Trenchless Construction and Renewals:</b> 
-  1583--1592, 2013 
+  1583-1592, 2013 
+  [<a href="#/"  onclick="toggle_visibility('axial13');">Abstract</a>]
+  <div style="display:none" id="axial13"><u>Abstract:</u><br>
+  Oil production subsea systems consist of floating platforms connected to subsea wells by a network of pipelines. These pipelines, when transporting oil and gas in deepwater, undergo significant changes in temperature and pressure during service life. In addition, some of the deepwater oil pipelines are on very soft sea bed and are susceptible to axial and lateral movement (or walking) of pipelines due to cyclic thermal changes and lateral buckling due to thermal expansion under operating conditions. Correctly predicting axial `walking' and controlling lateral buckling are extremely sensitive to the selection of pipe-soil interaction parameters during the safe design of the network of pipelines. However, the soil resistance to various types of pipe movement is a significant uncertainty and, hence, the current practice relies on empirical expression for pipe-soil resistance. Although there are several numerical approaches proposed to model the pipe-soil interaction, there are very limited experimental studies and quantification of various important parameters for designing and maintaining a network of pipelines. Several physical models have been designed and constructed at the CIGMAT Laboratory to investigate the behavior of pipes on the sea bed. In this preliminary study, series of small model tests were performed using instrumented 1.625 in diameter (40 mm) pipes placed on the soft clay soil (undrained shear strength of 1.4 kPa or 29 psf) to better quantify the axial and lateral soil pipe interactions. Effect of displacement rate and weight of the pipe (vertical load) were also investigated in this model study. Deepwater pipes are insulated with layers of polymers and the outside layer in contact with the soil is solid plastic. The interaction of loaded pipe with soil berms created as the pipe displaced laterally was also studied and quantified. The variation of the frictional parameter with the type (axial and lateral) and rate of loading and weight of the pipe have been quantified. The test results showed that when the axial rate of loading was increased the frictional coefficient between the pipe and the soil reduced and the weight of the pipe had no effect on the frictional coefficient within the range of variables studied. The lateral frictional coefficient was higher than the axial frictional coefficient.`
+  </div> 
+  [<a href="#/" onclick="toggle_visibility('axial13bibtex');">BibTeX</a>]<div style="display: none" id="axial13bibtex">
+  <pre>
+@incollection{vipulanandan2013deepwater,
+title={Deepwater axial and lateral sliding pipe-soil interaction model study},
+author={C.~Vipulanandan and J.~A.~Yanhouide and M.~S.~Joshaghani},
+booktitle={Pipelines 2013: Pipelines and Trenchless Construction and Renewals—A Global Perspective},
+pages={1583--1592},
+year={2013}
+}
+  </pre>
 </li>
-<!--  -->
-<!--  -->
-<li>
-<b>M. S. Joshaghani</b>, and B. Riviere,
-"A computational framework for vertex upwinding scheme in two-phase flow",
-<i>in preparation</i>
-</li>
-<!--  -->
-<!--  -->
+
+
+
+
+</ol>
+<h3>In-Preparation</h3>
+<ol>
 <li>
 <b>M. S. Joshaghani</b>, B. Riviere, and M. Sekachev,
-"Maximum-principle-satisfying discontinuous galerkin methods for compressible two-phase immiscible flow"
-<i>in preparation</i>
+"A bound-preserving discontinuous
+Galerkin method for compressible two-phase flow.",
 </li>
-<!--  -->
-<!--  -->
+
+
+
+<li>
+<b>M. S. Joshaghani</b>, and B. Riviere,
+"Maximum-principle preserving discontinuous Galerkin
+schemes for convection-dominated PDEs: a brief survey"
+</li>
+
+
+
 <li>
 K. B. Nakshatrala, <b>M. S. Joshaghani</b>, and M. Shabouei,
 "A posteriori criterion based on Noether's theorem to assess accuracy of numerical
 solutions for diffusion equations"
-<i>in preparation</i>
 </li>
+
+
+
 <!--  -->
 <!--  -->
 <!-- <li> -->
@@ -123,69 +353,109 @@ solutions for diffusion equations"
 <!-- </li> -->
 
 </ol>
-<h2>Conference presentations and Talks</h2>
+<h3>PhD thesis</h3>
 <ol>
-  <li>
-    <i>"Mechanics at the interface of flow and highly heterogeneous domain with complex porous structures",</i>
-    M. S. Joshaghani,
-    <b>Department of Computational & Applied Mathematics (CAAM) Colloquium</b>, Rice University, October 2020. [invited talk]
-  </li>
+<li> <b>M. S. Joshaghani</b>,
+<a href="Files/Sarraf_PhD_Dissertation.pdf" target="_blank">
+  "Multi-scale and interface mechanics for porous media: mathematical models and computational frameworks"</a>, University of Houston, Houston, TX, USA, 2019.
+[<a 
+href="Files/Sarraf_PhD_Dissertation.pdf">click here to view</a>] 
+[<a href="#/"  onclick="toggle_visibility('PhDThesis');">Abstract</a>]
+<div style="display:none" id="PhDThesis"><u>Abstract:</u><br>
+  <p>
+The are many challenges in subsurface modeling. First, many important subsurface processes occur at the interfaces, either the interface of two different porous media (e.g., layered media) or the interface of free-porous media (e.g., hyporheic zones, arterial mass transport). Second, these processes (flow, transport, and mechanical deformation) are complex, coupled, and multi-physics by nature. Third, natural geomaterials such as fissured rocks often exhibit a pore-size distribution with two dominant pore scales. Fourth, the practical problems are invariably large-scale by nature. Thus, successful modeling of such processes in complex porous media requires: (i) an accurate prescription of flow dynamics within each region and at the interface, (ii) development of robust and accurate computational methods, and (iii) implementation and understanding of these models in a parallel and scalable high-performance computing (HPC) environment. 
+  </p><p>
+This dissertation develops modeling strategies to advance the current state-of-the-art in subsurface modeling to address the challenges mentioned above. The specific aims are three-fold: First, we develop a comprehensive mathematical framework that provides a self-consistent set of conditions for flow dynamics at an interface. It will be shown that many of the popular interface conditions form special cases of the proposed framework. The approach hinges on extending the principle of virtual power to account for the power expended at the interface and then appealing to the calculus of variations. 
+  </p><p>
+Second, we present a discontinuous Galerkin formulation for the double porosity/permeability (DPP) model. We present a numerical procedure to discretize the interface conditions accurately. We develop numerical strategies to simulate and study the flow of fluids in porous media with complex pore-networks by using the DPP model. We also devise solver and parallel computing strategies to solve large-scale practical problems. 
+  </p><p>
+Third, we address the coupling of mechanical deformation of the porous solid with transport processes. We assume the porous solid to be an elastoplastic material, and transport of chemical species to be Fickian and develop a mathematical model and a robust computational framework. These modeling tools can be applied to a variety of problems such as moisture diffusion in cementitious materials and consolidation of soils under severe loading-unloading regimes.
+</p>
+</div> 
+[<a href="#/" onclick="toggle_visibility('PhDThesisBibtex');">BibTeX</a>]<div style="display: none" id="PhDThesisBibtex">
+<pre>
+@misc{SarrafPhD,
+title = {Multi-scale and interface mechanics for porous media: mathematical models and computational frameworks},
+author = {M.~S.~Joshaghani},
+year = {2019},
+institution = {University of Houston},
+}
+</pre>
+</ol>
+
+<h3>Conference presentations and Talks</h3>
+<ol>
+
+<li>
+<i>"Maximum-principle-satisfying discontinuous Galerkin methods for compressible two-phase immiscible flow"</i>,
+<u>SIAM Conference on Mathematical and Computational Issues in the Geosciences (GS21)</u>, Online, June 2021. [oral presentation]
+</li>
 
 
 
 
-<li><i>"Maximum-principle-preserving vertex-based method for two phase flows in porous media",</i>
-M. S. Joshaghani, and B. Riviere,
-<b> 3rd Annual Meeting of the Society of Industrial and Applied Mathematics (SIAM) Texas-Louisiana Section</b>, Texas A & M University, October 2020. [invited talk]    </li>
+<li>
+<i>"A maximum principle preserving finite element method with mass conservation property for solving two-phase flow in heterogeneous porous media"</i>,
+<u>13th Annual Meeting of the International Society for Porous Media (InterPore)</u>, Online Conference, June 2021. [oral presentation] </li>
 
 
 
 
-<li><i>"A modeling framework for coupled plasticity and species diffusion with applications to degradation",</i>
-  M. S. Joshaghani, and K. B. Nakshatrala,
-  <b>Engineering Mechanics Institute (EMI) Conference</b>,  Pasadena, CA, June 2019. [poster presentation]   </li>
+
+
+
+<li>
+<i>"Mechanics at the interface of flow and highly heterogeneous domain with complex porous structures"</i>,
+<u>Department of Computational & Applied Mathematics (CAAM) Colloquium</u>, Rice University, October 2020. [invited talk]
+</li>
 
 
 
 
-<li><i>"A scalable parallel implementation of double porosity/permeability model",
-  </i>
-  M. S. Joshaghani, and K. B. Nakshatrala,
- On compos- able block solvers and performance spectrum model for the four-field double poros- ity/permeability model <b> Society of Industrial and Applied Mathematics (SIAM) Conference on Mathematical and Computational Issues in the Geosciences</b>,
+<li><i>"Maximum-principle-preserving vertex-based method for two phase flows in porous media"</i>,
+<u> 3rd Annual Meeting of the Society of Industrial and Applied Mathematics (SIAM) Texas-Louisiana Section</u>, Texas A & M University, October 2020. [invited talk]    </li>
+
+
+
+
+<li><i>"A modeling framework for coupled plasticity and species diffusion with applications to degradation"</i>,
+<u>Engineering Mechanics Institute (EMI) Conference</u>,  Pasadena, CA, June 2019. [poster presentation]   </li>
+
+
+
+
+<li><i>"A scalable parallel implementation of double porosity/permeability model"
+  </i>,
+<u> Society of Industrial and Applied Mathematics (SIAM) Conference on Mathematical and Computational Issues in the Geosciences</u>,
  Houston, TX,
  March 2019. [oral presentation]
 </li>
 
 
-<li><i>"On compos- able block solvers and performance spectrum model for the four-field double poros- ity/permeability model ",
-  </i>
-M. S. Joshaghani, J. Chang, K. B. Nakshatrala, and M. G. Knepley,
- <b> Society of Industrial and Applied Mathematics (SIAM) Con- ference on Computer Science and Engineering </b>,
+<li><i>"On composable block solvers and performance spectrum model for the four-field double porosity/permeability model "
+  </i>,
+ <u> Society of Industrial and Applied Mathematics (SIAM) Con- ference on Computer Science and Engineering </u>,
 Spokane, WA, Febreuary 2019. [poster presentation]
 </li>
 
 
-<li><i>"Stabilized discontinuous Galerkin formulation for modeling flow in highly heterogeneous media with complex porous structures",
-  </i>
-M. S. Joshaghani,
- <b> Center for Thermo-Fluid Mechanics (CTFM) Seminar </b>,
+<li><i>"Stabilized discontinuous Galerkin formulation for modeling flow in highly heterogeneous media with complex porous structures"
+  </i>,
+ <u> Center for Thermo-Fluid Mechanics (CTFM) Seminar </u>,
 Houston, TX, October 2018. [invited talk]
 </li>
 
 
 <li><i>"A stabilized mixed DG formulation for flow in porous media with double pore-networks"
   </i>,
-M. S. Joshaghani, S. H. Joodat, and K. B. Nakshatrala,
- <b> Engineering Mechanics Institute (EMI) Conference </b>,
+ <u> Engineering Mechanics Institute (EMI) Conference </u>,
  Boston, MA, May 2018. [oral and poster presentation]
 </li>
 
 
-<li><i>"Finite element simulation of deep-water pipe walking phenomenon on ultra soft soil",
-  </i>
-
-  M. S. Joshaghani, A. M. Raheem, C. Vipulanandan,
- <b> American Geophysical Union (AGU) Fall Meeting </b>
+<li><i>"Finite element simulation of deep-water pipe walking phenomenon on ultra soft soil"
+  </i>,
+ <u> American Geophysical Union (AGU) Fall Meeting </u>
 San Francisco, CA, December 2014. [poster presentation]
 </li>
 
