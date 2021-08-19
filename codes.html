@@ -1,0 +1,367 @@
+<html>
+<head><script type="text/javascript" src="http://livejs.com/live.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="Files/Sarraf.css">
+<link rel="stylesheet" type="text/css" href="Files/bibtex.css">
+ <!-- Toggle abstract and bibtex -->
+  <script type="text/javascript">
+      function toggle_visibility(id) {
+         var e = document.getElementById(id);
+         if(e.style.display == 'block')
+            e.style.display = 'none';
+         else
+            e.style.display = 'block';
+      }
+  </script>
+  <!-- zoom in jquery -->
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script>
+	<script src='jquery.zoom.js'></script>
+	<script>
+		$(document).ready(function(){
+			$('#ex1').zoom();
+			$('#ex2').zoom();
+			$('#ex3').zoom({ on:'click' });			 
+			$('#ex4').zoom({ on:'toggle' });
+		});
+	</script>
+  <!-- icons -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<!--Get your own code at fontawesome.com-->
+<title>Mohammad Sarraf Joshaghani's Codes</title>
+<body style="background-color:white">
+<h2><center>Selected Codes</center></h2>
+<blockquote>
+  <a href="index.html">Home</a> | 
+  <a href="publications.html">Publications</a> |
+  <a href="research.html">Research</a> |
+  <a href="Codes.html">CODES</a> |
+  <a href="teaching.html">Teaching</a> 
+</blockquote>
+<hr>
+<p></p>
+<div><a id="overview">
+    <div class="researchline">
+  <div class="col-18">
+    <h3 style="display:inline"><font color="rgb(0, 0, 44)">LimitedDG</font> </h3>&#8212 
+    Code for the numerical solution of immiscible two-phase flows in porous media, which is obtained by augmenting interior penalty DG formulation with post-processing flux and slope limiters. Resulting solutions are accurate, robust, mesh-independent, mass-conservative, and maximum-principle satisfying. The repo entails several examples of pressure-driven flow and quarter-five spot that account for gravity, capillary effects, and heterogeneity.
+  <p>
+  <font color="rgb(0, 0, 44)">  Download from GitHub <a href="https://github.com/msarrafj/LimiterDG"> https://github.com/msarrafj/LimiterDG</a></p> </font>
+
+<p>References:</p>
+
+
+    <table>
+	<tbody>	
+<tr> <td style="vertical-align:top">[1]&#160</td>
+<td>
+M. S. Joshaghani, B. Riviere, and M. Sekachev,
+<b>Maximum-principle-satisfying discontinuous Galerkin methods for incompressible two-phase immiscible flow</b><br>
+submitted to <i>Computer Methods in Applied Mechanics and Engineering Journal</i>, 2021 
+[<a href="https://arxiv.org/abs/2106.11807">arXiv link</a>] 
+[<a href="#/"  onclick="toggle_visibility('incompressible21');">Abstract</a>]
+<div style="display:none" id="incompressible21"><u>Abstract:</u><br>
+This paper proposes a fully implicit numerical scheme for immiscible incompressible two-phase flow in porous media taking into account gravity, capillary effects, and heterogeneity. The objective is to develop a fully implicit stable discontinuous Galerkin (DG) solver for this system that is accurate, bound-preserving, and locally mass conservative. To achieve this, we augment our DG formulation with post-processing flux and slope limiters. The proposed framework is applied to several benchmark problems and the discrete solutions are shown to be accurate, to satisfy the maximum principle and local mass conservation. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('incompressible21Bib');">BibTeX</a>]<div style="display: none" id="incompressible21Bib">
+<pre>
+@article{joshaghani2021Incompressible,
+  title={Maximum-principle-satisfying discontinuous Galerkin methods for incompressible two-phase immiscible flow},
+  author={M.~S.~Joshaghani and B.~Riviere and M.~Sekachev},
+  journal={arXiv preprint arXiv:2106.11807},
+  year={2021}
+}
+</pre>
+</td></tr>
+</tbody></table> </div>
+
+<div class="col-6">
+    <img src="Figures/Web/LimitedDG.png" style="width: 90%">
+</div>
+ </div> <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p></p> <div><a id="overview"> <div class="researchline"> 
+  <div class="col-18">
+        <h3 style="display:inline"><font color="rgb(0, 0, 44)">VertexBased-FE </font></h3>&#8212 
+     Code for a low-order numerical scheme that solves two-phase flows problems in heterogeneous porous media, The method is obtained by a first order finite element method equipped with mass-lumping and flux upwinding. The repo entails several examples of quarter-five spot problems and SPE10 problems in 2D and 3D settings.
+  <p>
+  <font color="rgb(0, 0, 44)">  Download from GitHub <a href="https://github.com/msarrafj/Vertex_based_method">https://github.com/msarrafj/Vertex_based_method</a></font></p> 
+
+<p>References:</p>
+
+
+  <table>
+	<tbody>	
+<tr> <td style="vertical-align:top ; padding:0px">[1]&#160 </td>
+<td>
+M. S. Joshaghani, V. Girault, and B. Riviere,
+<b>A vertex scheme for two-phase flow in heterogeneous media</b><br>
+submitted to <i>Journal of Computational Physics</i>, 2021 
+[<a href="https://arxiv.org/abs/2103.03285">arXiv link</a>] 
+[<a href="#/"  onclick="toggle_visibility('vertex21');">Abstract</a>]
+<div style="display:none" id="vertex21"><u>Abstract:</u><br>This paper presents the numerical solution of immiscible two-phase 
+flows in porous media, obtained by a first-order finite element method equipped with mass-lumping and flux up-winding. 
+The unknowns are the physical phase pressure and phase saturation. Our numerical experiments confirm that the method converges 
+optimally for manufactured solutions. For both structured and unstructured meshes, we observe the high-accuracy wetting saturation 
+profile that ensures minimal numerical diffusion at the front. Performing several examples of quarter-five spot problems in two and 
+three dimensions, we show that the method can easily handle heterogeneities in the permeability field. Two distinct features that make 
+the method appealing to reservoir simulators are: (i) maximum principle is satisfied, and (ii) mass balance is locally conserved. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('vertex21bibtex');">BibTeX</a>]<div style="display: none" id="vertex21bibtex">
+<pre>
+@article{joshaghani2021vertex,
+  title={A vertex scheme for two-phase flow in heterogeneous media},
+  author={M.~S.~Joshaghani and V.~Girault and B.~Riviere},
+  journal={arXiv preprint arXiv:2103.03285},
+  year={2021}
+}
+</pre>
+</td></tr>
+</tbody></table> </div> 
+<div class="col-6">
+    <img src="Figures/Web/VertexBased.png" style="width: 90%">
+</div></div> <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p></p> <div><a id="overview"> <div class="researchline"> 
+  <div class="col-18">
+        <h3 style="display:inline"><font color="rgb(0, 0, 44)">HPC-composableSolver</font> </h3>&#8212 
+    Code for implementing recently developed block preconditioning strategies to solve the discrete systems that arise from double porosity/permeability model in 2D and 3D porous media. Implementation for three different finite element discretizations (classical mixed formulation with H(div) elements, stabilized continuous Galerkin mixed formulation, and stabilized discontinuous Galerkin mixed formulation) are provided to compare scalability of solver strategies for each case. Solvers are implemented seamlessly using the existing PETSc’s composable solver options.
+  <p>
+  <font color="rgb(0, 0, 44)">  Download from GitHub <a href="https://github.com/msarrafj/HPC_composableSolver">https://github.com/msarrafj/HPC_composableSolver</a></font></p> 
+
+<p>References:</p>
+
+
+    <table>
+	<tbody>	
+
+
+
+<tr> <td style="vertical-align:top">[1]&#160</td>
+<td>
+M. S. Joshaghani, J. Chang, K. B. Nakshatrala, and M. G. Knepley,
+<a href="https://www.sciencedirect.com/science/article/pii/S0021999119301378" target="_blank">
+  <b>On composable block solvers and performance spectrum analysis for double porosity/permeability model</b></a><br>
+<i>Journal of Computational Physic</i>,
+386: 428-466, 2019
+[<a 
+href="https://arxiv.org/abs/1808.08328" target="_blank">arXiv link</a>] 
+[<a href="#/"  onclick="toggle_visibility('HPC19');">Abstract</a>]
+<div style="display:none" id="HPC19"><u>Abstract:</u><br>
+The objective of this paper is twofold. First, we propose two composable block solver methodologies to solve the discrete systems that arise from finite element discretizations of the double porosity/permeability (DPP) model. The DPP model, which is a four-field mathematical model, describes the flow of a single-phase incompressible fluid in a porous medium with two distinct pore-networks and with a possibility of mass transfer between them. Using the composable solvers feature available in PETSc and the finite element libraries available under the Firedrake Project, we illustrate two different ways by which one can effectively precondition these large systems of equations. Second, we employ the recently developed performance model called the Time-Accuracy-Size (TAS) spectrum to demonstrate that the proposed composable block solvers are scalable in both the parallel and algorithmic sense. Moreover, we utilize this spectrum analysis to compare the performance of three different finite element discretizations (classical mixed formulation with H(div) elements, stabilized continuous Galerkin mixed formulation, and stabilized discontinuous Galerkin mixed formulation) for the DPP model. Our performance spectrum analysis demonstrates that the composable block solvers are fine choices for any of these three finite element discretizations. Sample computer codes are provided to illustrate how one can easily implement the proposed block solver methodologies through PETSc command line options. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('HPC19bibtex');">BibTeX</a>]<div style="display: none" id="HPC19bibtex">
+<pre>
+@article{joshaghani2019composable,
+title={Composable block solvers for the four-field double porosity/permeability model},
+author={M.~S.~Joshaghani and J.~Chang and K.~B.~Nakshatrala and M.~G.~Knepley},
+journal={Journal of Computational Physics},
+volume={386},
+pages={428--466},
+year={2019},
+publisher={Elsevier}
+}
+</pre>
+</td></tr>
+
+
+
+
+<tr> <td style="vertical-align:top">[2]&#160</td>
+<td>
+M. S. Joshaghani,
+<a href="Files/Sarraf_PhD_Dissertation.pdf" target="_blank">
+  <b>Multi-scale and interface mechanics for porous media: mathematical models and computational frameworks</b></a><br>
+<i>PhD Thesis</i>,
+University of Houston, 2019
+[<a 
+[<a href="#/"  onclick="toggle_visibility('PhDThesis');">Abstract</a>]
+<div style="display:none" id="PhDThesis"><u>Abstract:</u><br>
+The are many challenges in subsurface modeling. First, many important subsurface processes occur at the interfaces, either the interface of two different porous media (e.g., layered media) or the interface of free-porous media (e.g., hyporheic zones, arterial mass transport). Second, these processes (flow, transport, and mechanical deformation) are complex, coupled, and multi-physics by nature. Third, natural geomaterials such as fissured rocks often exhibit a pore-size distribution with two dominant pore scales. Fourth, the practical problems are invariably large-scale by nature. Thus, successful modeling of such processes in complex porous media requires: (i) an accurate prescription of flow dynamics within each region and at the interface, (ii) development of robust and accurate computational methods, and (iii) implementation and understanding of these models in a parallel and scalable high-performance computing (HPC) environment. 
+ <p>
+This dissertation develops modeling strategies to advance the current state-of-the-art in subsurface modeling to address the challenges mentioned above. The specific aims are three-fold: First, we develop a comprehensive mathematical framework that provides a self-consistent set of conditions for flow dynamics at an interface. It will be shown that many of the popular interface conditions form special cases of the proposed framework. The approach hinges on extending the principle of virtual power to account for the power expended at the interface and then appealing to the calculus of variations. 
+  </p><p>
+Second, we present a discontinuous Galerkin formulation for the double porosity/permeability (DPP) model. We present a numerical procedure to discretize the interface conditions accurately. We develop numerical strategies to simulate and study the flow of fluids in porous media with complex pore-networks by using the DPP model. We also devise solver and parallel computing strategies to solve large-scale practical problems. 
+  </p><p>
+Third, we address the coupling of mechanical deformation of the porous solid with transport processes. We assume the porous solid to be an elastoplastic material, and transport of chemical species to be Fickian and develop a mathematical model and a robust computational framework. These modeling tools can be applied to a variety of problems such as moisture diffusion in cementitious materials and consolidation of soils under severe loading-unloading regimes.
+</p>
+</div> 
+[<a href="#/" onclick="toggle_visibility('PhDThesisBibtex');">BibTeX</a>]<div style="display: none" id="PhDThesisBibtex">
+<pre>
+@misc{SarrafPhD,
+title = {Multi-scale and interface mechanics for porous media: mathematical models and computational frameworks},
+author = {M.~S.~Joshaghani},
+year = {2019},
+institution = {University of Houston},
+}
+</pre> </td></tr> </tbody></table> </div>
+<div class="col-6">
+    <img src="Figures/Web/Performance.svg" style="width: 90%">
+</div></div> <hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p></p> <div><a id="overview"> <div class="researchline">
+  <div class="col-18">
+        <h3 style="display:inline"><font color="rgb(0, 0, 44)">DPP-DG</font> </h3>&#8212 
+        Code for a stabilized mixed DG formulation of double porosity/permeability (DPP) model, which describes the flow of a single-phase incompressible fluid in a rigid porous medium with two distinct pore-networks with possible mass transfer across them. The method provides accurate results even for disparate material properties, captures physical instabilities while eliminating numerical artifacts, and supports non-conforming discretizations. The repo entails codes for solving the coupled flow-transport problem (such as miscible displacement) in the heterogeneous porous medium.
+  <p>
+  <font color="rgb(0, 0, 44)">  Download from GitHub <a href="https://github.com/msarrafj/Double_Porosity_Permeability">https://github.com/msarrafj/Double_Porosity_Permeability</a></font></p> 
+
+<p>References:</p>
+
+
+    <table>
+	<tbody>	
+
+<tr> <td style="vertical-align:top">[1]&#160</td>
+<td>
+ M. S. Joshaghani, S. H. Joodat, and K. B. Nakshatrala,
+<a href="https://www.sciencedirect.com/science/article/pii/S0045782519302075?dgcid=author" target="-blank">
+  <b>A stabilized mixed discontinuous Galerkin formulation for double porosity/permeability model</b></a><br>
+<i>Computer Methods in Applied Mechanics and Engineering Journal</i>, 352: 508-560, 2019
+[<a
+href="https://arxiv.org/abs/1805.01389" target="_blank">arXiv link</a>] 
+[<a href="#/"  onclick="toggle_visibility('DPP19');">Abstract</a>]
+<div style="display:none" id="DPP19"><u>Abstract:</u><br>
+Modeling flow through porous media with multiple pore-networks has now become an active area of research due to recent technological endeavors like geological carbon sequestration and recovery of hydrocarbons from tight rock formations. Herein, we consider the double porosity/permeability (DPP) model, which describes the flow of a single-phase incompressible fluid through a porous medium exhibiting two dominant pore-networks with a possibility of mass transfer across them. We present a stable mixed discontinuous Galerkin (DG) formulation for the DPP model. The formulation enjoys several attractive features. These include: (i) Equal-order interpolation for all the field variables (which is computationally the most convenient) is stable under the proposed formulation. (ii) The stabilization terms are residual-based, and the stabilization parameters do not contain any mesh-dependent parameters. (iii) The formulation is theoretically shown to be consistent, stable, and hence convergent. (iv) The formulation supports non-conforming discretizations and distorted meshes. (v) The DG formulation has improved element-wise (local) mass balance compared to the corresponding continuous formulation. (vi) The proposed formulation can capture physical instabilities in coupled flow and transport problems under the DPP model. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('DPP19bibtex');">BibTeX</a>]<div style="display: none" id="DPP19bibtex">
+<pre>
+@article{joshaghani2019stabilized,
+title={A stabilized mixed discontinuous Galerkin formulation for double porosity/permeability model},
+author={M.~S.~Joshaghani and S.~H.~S.~Joodat and K.~B.~Nakshatrala},
+journal={Computer Methods in Applied Mechanics and Engineering},
+volume={352},
+pages={508--560},
+year={2019},
+publisher={Elsevier}
+}
+</pre>
+</td></tr>
+
+
+
+<tr> <td>[2]&#160</td>
+<td>
+M. S. Joshaghani,
+<a href="Files/Sarraf_PhD_Dissertation.pdf" target="_blank">
+  <b>Multi-scale and interface mechanics for porous media: mathematical models and computational frameworks</b></a><br>
+<i>PhD Thesis</i>,
+University of Houston, 2019
+[<a 
+[<a href="#/"  onclick="toggle_visibility('PhDThesis');">Abstract</a>]
+<div style="display:none" id="PhDThesis"><u>Abstract:</u><br>
+The are many challenges in subsurface modeling. First, many important subsurface processes occur at the interfaces, either the interface of two different porous media (e.g., layered media) or the interface of free-porous media (e.g., hyporheic zones, arterial mass transport). Second, these processes (flow, transport, and mechanical deformation) are complex, coupled, and multi-physics by nature. Third, natural geomaterials such as fissured rocks often exhibit a pore-size distribution with two dominant pore scales. Fourth, the practical problems are invariably large-scale by nature. Thus, successful modeling of such processes in complex porous media requires: (i) an accurate prescription of flow dynamics within each region and at the interface, (ii) development of robust and accurate computational methods, and (iii) implementation and understanding of these models in a parallel and scalable high-performance computing (HPC) environment. 
+ <p>
+This dissertation develops modeling strategies to advance the current state-of-the-art in subsurface modeling to address the challenges mentioned above. The specific aims are three-fold: First, we develop a comprehensive mathematical framework that provides a self-consistent set of conditions for flow dynamics at an interface. It will be shown that many of the popular interface conditions form special cases of the proposed framework. The approach hinges on extending the principle of virtual power to account for the power expended at the interface and then appealing to the calculus of variations. 
+  </p><p>
+Second, we present a discontinuous Galerkin formulation for the double porosity/permeability (DPP) model. We present a numerical procedure to discretize the interface conditions accurately. We develop numerical strategies to simulate and study the flow of fluids in porous media with complex pore-networks by using the DPP model. We also devise solver and parallel computing strategies to solve large-scale practical problems. 
+  </p><p>
+Third, we address the coupling of mechanical deformation of the porous solid with transport processes. We assume the porous solid to be an elastoplastic material, and transport of chemical species to be Fickian and develop a mathematical model and a robust computational framework. These modeling tools can be applied to a variety of problems such as moisture diffusion in cementitious materials and consolidation of soils under severe loading-unloading regimes.
+</p>
+</div> 
+[<a href="#/" onclick="toggle_visibility('PhDThesisBibtex');">BibTeX</a>]<div style="display: none" id="PhDThesisBibtex">
+<pre>
+@misc{SarrafPhD,
+title = {Multi-scale and interface mechanics for porous media: mathematical models and computational frameworks},
+author = {M.~S.~Joshaghani},
+year = {2019},
+institution = {University of Houston},
+}
+</pre> </td></tr> </tbody></table> </div> 
+
+<div class="col-6">
+    <img src="Figures/Web/DPP.SVG" style="width: 90%">
+</div></div> <hr>
+
+
+
+
+
+
+
+
+
+
+
+<p></p> <div><a id="overview"> <div class="researchline"> 
+  <div class="col-18">
+        <h3 style="display:inline"><font color="rgb(0, 0, 44)">StableDegradation</font> </h3>&#8212 
+        Code for diffusion-induced degradation/healing of solid materials that undergo (elastoplastic) deformation. Solver hinges on an optimization-based non-negative (NN) formulation that respects physical constraints. This code entails two different coupling strategies and two different degradation models.
+  <p>
+  <font color="rgb(0, 0, 44)">  Download from GitHub <a href="https://github.com/msarrafj/Coupled-plasticity-diffusion">https://github.com/msarrafj/Coupled-plasticity-diffusion</a></font></p> 
+
+<p>References:</p>
+
+    <table>
+	<tbody>	
+
+<tr> <td style="vertical-align:top">[1]&#160</td> <td>
+M. S. Joshaghani, and K. B. Nakshatrala,
+<b>A modeling framework for coupling plasticity with species diffusion</b><br>
+submitted to <i>International Journal for Numerical Methods in Engineering</i>, 2020 
+[<a href="https://arxiv.org/abs/2011.06652" target="_blank">arXiv link</a>] 
+[<a href="#/"  onclick="toggle_visibility('plasticity20');">Abstract</a>]
+<div style="display:none" id="plasticity20"><b>Abstract:</b><br>
+This paper presents a modeling framework&#8212mathematical model and computational framework&#8212to study the response of a plastic material due to the presence and transport of a chemical species in the host material. Such a modeling framework is important to a wide variety of problems ranging from Li-ion batteries, moisture diffusion in cementitious materials, hydrogen diffusion in metals, to consolidation of soils under severe loading-unloading regimes. The mathematical model incorporates experimental observations reported in the literature on how (elastic and plastic) material properties change because of the presence and transport of a chemical species. Also, the model accounts for one-way (transport affects the deformation but not vice versa) and two-way couplings between deformation and transport subproblems. The resulting coupled equations are not amenable to analytical solutions; so, we present a robust computational framework for obtaining numerical solutions. Given that popular numerical formulations do not produce nonnegative solutions, the computational framework uses an optimization-based nonnegative formulation that respects physical constraints (e.g., nonnegative concentrations). For completeness, we will also show the effect and propagation of the negative concentrations, often produced by contemporary transport solvers, into the overall predictions of deformation and concentration fields. Notably, anisotropy of the diffusion process exacerbates these unphysical violations. Using representative numerical examples, we will discuss how the concentration field affects plastic deformations of a degrading solid. Based on these numerical examples, we also discuss how plastic zones spread because of material degradation. To illustrate how the proposed computational framework performs, we report various performance metrics such as optimization iterations and time-to-solution. 
+</div> 
+[<a href="#/" onclick="toggle_visibility('plasticity20bibtex');">BibTeX</a>]<div style="display: none" id="plasticity20bibtex">
+<pre>
+@article{joshaghani2020modeling,
+  title={A modeling framework for coupling plasticity with species diffusion},
+  author={M.~S.~Joshaghani and N.~B.~Nakshatrala},
+  journal={arXiv preprint arXiv:2011.06652},
+  year={2020}
+}
+</pre> </td></tr> </tbody></table> </div>
+<div class="col-6">
+    <img src="Figures/Web/Degradation.png" style="width: 90%">
+</div></div> 
+
+
+
+
+
+</body></html>
